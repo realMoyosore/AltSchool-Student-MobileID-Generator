@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AltSchool Student MobileID</title>
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <div class="container">
+        <h1>AltSchool Student MobileID Generator</h1>
+        <p>Generate your student MobileID with one click.</p>
+        <form id="id-generator-form">
+          <details>
+            <summary>Important Information</summary>
+            Ensure your enter the correct details as registered with AltSchool.
+          </details>
+          <label for="surname-name">Enter Surname</label>
+          <input type="text" id="surname-name" name="surname-name" required />
+          <label for="first-name">Enter First Name</label>
+          <input type="text" id="first-name" name="first-name" required />
+          <label for="middle-name">Enter Middle Name</label>
+          <input type="text" id="middle-name" name="middle-name" />
+          <label for="email">Enter Email</label>
+          <input type="email" id="email" name="email" required />
+          <label for="student-id">Enter Student ID</label>
+          <input type="text" id="student-id" name="student-id" required />
+          <label for="track">Enter your track</label>
+          <input type="text" id="track" name="track" required />
+
+          <button type="submit">Generate ID</button>
+        </form>
+        <div id="result"></div>
+      </div>
+    </main>
+    <footer></footer>
+  </body>
+</html>
