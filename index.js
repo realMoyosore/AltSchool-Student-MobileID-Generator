@@ -1,4 +1,4 @@
-import { jsPDF } from "jspdf";
+// import { jsPDF } from "jspdf";
 
 document.getElementById('mobileID-generator').addEventListener('submit', function (e) {
     e.preventDefault();
@@ -14,7 +14,7 @@ document.getElementById('mobileID-generator').addEventListener('submit', functio
     // displayResult(mobileID);
 
     // Create PDF file
-    // const { jsPDF } = window.jspdf;
+    const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
     doc.setFontSize(16);
     doc.text(`Mobile ID for ${firstName} ${surname}`, 10, 10);
