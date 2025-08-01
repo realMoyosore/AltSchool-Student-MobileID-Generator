@@ -10,9 +10,6 @@ document.getElementById('mobileID-generator').addEventListener('submit', functio
     const studentId = document.getElementById('student-id').value;
     const track = document.getElementById('track').value;
 
-    // const mobileID = generateMobileID(surname, firstName, middleName, email, studentId, track);
-    // displayResult(mobileID);
-
     // Create PDF file
     const { jsPDF } = window.jspdf;
     const doc = new jsPDF();
@@ -30,16 +27,3 @@ document.getElementById('mobileID-generator').addEventListener('submit', functio
 
 
 });
-
-
-
-
-
-// function generateMobileID(surname, firstName, middleName, email, studentId, track) {
-//     return `${surname.charAt(0)}${firstName.charAt(0)}${middleName.charAt(0)}-${studentId}-${track}`;
-// }
-
-// function displayResult(mobileID) {
-//     const resultDiv = document.getElementById('result');
-//     resultDiv.innerHTML = `<h2>Your Mobile ID:</h2><p>${mobileID}</p>`;
-// }
