@@ -34,8 +34,16 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     width: 128,
     height: 128,
   });
-    
-    
+
+  await new Promise((resolve) => setTimeout(resolve, 500));
+  const qrImg = qrDiv.querySelector("img") || qrDiv.querySelector("canvas");
+  let qrDataUrl;
+  if (qrImg.tagName === "IMG") {
+    qrDataUrl = qrImg.src;
+  } else {
+    qrDataUrl = qrImg.toDataURL();
+  }
+  qrDiv.remove();
 
   doc.addImage(qrDataUrl, "PNG", 10, 80, 40, 40);
   doc.save("AltSchool_MobileID.pdf");
