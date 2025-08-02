@@ -25,5 +25,11 @@ document.getElementById('mobileID-generator').addEventListener('submit', functio
     alert('Mobile ID generated and saved as PDF!');
     document.getElementById('mobileID-generator').reset();
 
+    // Add QR Code feature
+    doc.addImage(qrDataUrl, 'PNG', 10, 80, 40, 40);
+    doc.save('AltSchool_MobileID.pdf');
+
 
 });
+
+
