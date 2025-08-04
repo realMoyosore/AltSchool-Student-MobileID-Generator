@@ -3,7 +3,7 @@
 document.getElementById("mobileID-generator").addEventListener("submit", async function (e) {
   e.preventDefault();
 
-  const surname = document.getElementById("surname-name").value;
+  const surname = document.getElementById("surname").value;
   const firstName = document.getElementById("first-name").value;
   const middleName = document.getElementById("middle-name").value;
   const email = document.getElementById("email-address").value;
