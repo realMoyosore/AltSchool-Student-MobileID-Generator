@@ -47,8 +47,4 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
 
   doc.addImage(qrDataUrl, "PNG", 10, 80, 40, 40);
   doc.save("AltSchool_MobileID.pdf");
-
-  // Card background
-  doc.setFillColor(255, 192, 5);
-  doc.rect(0, 0, 85.6, 54, 'F');
 });
