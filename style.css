@@ -43,14 +43,3 @@ button:hover {
   background-color: #e6b800;
 }
 
-
-@media print {
-  body {
-    font-family: Arial, sans-serif;
-    font-size: 12pt;
-    margin: 1in;
-  }
-  .no-print {
-    display: none;
-  }
-}
