@@ -40,11 +40,11 @@ button {
 }
 
 button:hover {
-  background-color: #e6b800;
+  background-color: #686146;
 }
 
 .mobileID-card {
-  background-color: #bbbbbb;
+  background-color: #e4e4e4;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
