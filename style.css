@@ -41,6 +41,7 @@ button {
 
 button:hover {
   background-color: #686146;
+  transform: translateY(-2px);
 }
 
 .mobileID-card {
