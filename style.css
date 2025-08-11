@@ -45,7 +45,7 @@ button:hover {
 }
 
 .mobileID-card {
-  background-color: #e4e4e4;
+  background-color: #ffffff;
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -53,6 +53,7 @@ button:hover {
   flex-direction: column;
   gap: 12px;
   justify-content: center;
+  align-items: center;
 }
 
 .main-content {
