@@ -47,4 +47,8 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
 
   doc.addImage(qrDataUrl, "PNG", 10, 80, 40, 40);
   doc.save("AltSchool_MobileID.pdf");
+
+  // Show success message
+  alert("Mobile ID generated successfully!");
+
 });

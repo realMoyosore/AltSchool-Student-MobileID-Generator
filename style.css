@@ -58,9 +58,10 @@ button:hover {
 
 .main-content {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr; 
+  grid-template-columns: 1fr 1fr 1fr;
   gap: 12px;
 }
+
 img {
   max-width: 100%;
   height: auto;
