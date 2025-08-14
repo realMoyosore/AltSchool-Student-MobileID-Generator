@@ -21,8 +21,6 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   doc.text(`Email: ${email}`, 10, 50);
   doc.text(`Student ID: ${studentId}`, 10, 60);
   doc.text(`Track: ${track}`, 10, 70);
-  doc.save(`${surname}-${firstName}-MobileID.pdf`);
-  alert("Mobile ID generated and saved as PDF!");
   document.getElementById("mobileID-generator").reset();
 
   // Add QR Code feature
@@ -46,9 +44,41 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   qrDiv.remove();
 
   doc.addImage(qrDataUrl, "PNG", 10, 80, 40, 40);
-  doc.save("AltSchool_MobileID.pdf");
+  doc.save(`${surname}-${firstName}-AltSchool_MobileID.pdf`);
 
   // Show success message
   alert("Mobile ID generated successfully!");
+
+});
+
+
+document.getElementById("mobileID-generator").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const surname = document.getElementById("surname").value;
+  const firstName = document.getElementById("first-name").value;
+  const middleName = document.getElementById("middle-name").value;
+  const email = document.getElementById("email-address").value;
+  const studentId = document.getElementById("student-id").value;
+  const track = document.getElementById("track").value;
+
+  // Update main-content with user input
+  const mainContent = document.querySelector('.main-content');
+  const spans = mainContent.querySelectorAll('.text-content span');
+  if (spans.length >= 4) {
+    spans[0].textContent = surname;
+    spans[1].textContent = `${firstName} ${middleName}`;
+    spans[2].textContent = new Date().toLocaleDateString(); // Issue Date
+    // Set expiry date to one year from now
+    const expiryDate = new Date();
+    expiryDate.setFullYear(expiryDate.getFullYear() + 1);
+    spans[3].textContent = expiryDate.toLocaleDateString();
+  }
+
+  // Update student ID in id-number section
+  const idNumberSpan = document.querySelector('.id-number span');
+  if (idNumberSpan) {
+    idNumberSpan.textContent = studentId;
+  }
 
 });
