@@ -81,4 +81,24 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     idNumberSpan.textContent = studentId;
   }
 
+  const photoInput = document.getElementById("idPhoto");
+  const studentImageDiv = document.querySelector(".student-image");
+  studentImageDiv.innerHTML = ""; // Clear previous image
+
+  if (photoInput.files && photoInput.files[0]) {
+    const reader = new FileReader();
+    reader.onload = function (event) {
+      const img = document.createElement("img");
+      img.src = event.target.result;
+      img.alt = "Student Photo";
+      img.style.width = "100px"; // Adjust size as needed
+      img.style.height = "100px";
+      img.style.objectFit = "cover";
+      studentImageDiv.appendChild(img);
+    };
+    reader.readAsDataURL(photoInput.files[0]);
+  } else {
+    studentImageDiv.textContent = "No photo uploaded";
+  }
+
 });
