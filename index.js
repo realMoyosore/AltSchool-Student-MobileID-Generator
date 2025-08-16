@@ -63,35 +63,29 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   const track = document.getElementById("track").value;
 
   // Update main-content with user input
-  const mainContent = document.querySelector('.main-content');
-  const spans = mainContent.querySelectorAll('.text-content span');
-  if (spans.length >= 4) {
-    spans[0].textContent = surname;
-    spans[1].textContent = `${firstName} ${middleName}`;
-    spans[2].textContent = new Date().toLocaleDateString(); // Issue Date
-    // Set expiry date to one year from now
+  const textSpans = document.querySelectorAll('.text-content span');
+  if (textSpans.length >= 6) {
+    textSpans[0].textContent = surname;
+    textSpans[1].textContent = `${firstName} ${middleName}`;
+    textSpans[2].textContent = email;
+    textSpans[3].textContent = track;
+    textSpans[4].textContent = new Date().toLocaleDateString(); // Issue Date
     const expiryDate = new Date();
     expiryDate.setFullYear(expiryDate.getFullYear() + 1);
-    spans[3].textContent = expiryDate.toLocaleDateString();
+    textSpans[5].textContent = expiryDate.toLocaleDateString();
   }
 
-  // Update student ID in id-number section
-  const idNumberSpan = document.querySelector('.id-number span');
-  if (idNumberSpan) {
-    idNumberSpan.textContent = studentId;
-  }
-
+  // Update student image
   const photoInput = document.getElementById("idPhoto");
   const studentImageDiv = document.querySelector(".student-image");
   studentImageDiv.innerHTML = ""; // Clear previous image
-
   if (photoInput.files && photoInput.files[0]) {
     const reader = new FileReader();
     reader.onload = function (event) {
       const img = document.createElement("img");
       img.src = event.target.result;
       img.alt = "Student Photo";
-      img.style.width = "100px"; // Adjust size as needed
+      img.style.width = "100px";
       img.style.height = "100px";
       img.style.objectFit = "cover";
       studentImageDiv.appendChild(img);
@@ -101,4 +95,18 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     studentImageDiv.textContent = "No photo uploaded";
   }
 
+  // Update QR code
+  const qrSection = document.querySelector('.qrcode-section');
+  qrSection.innerHTML = "";
+  const qrCode = new QRCode(qrSection, {
+    text: studentId,
+    width: 80,
+    height: 80
+  });
+
+  // Update student ID in id-number section
+  const idNumberSpan = document.querySelector('.id-number span');
+  if (idNumberSpan) {
+    idNumberSpan.textContent = studentId;
+  }
 });
