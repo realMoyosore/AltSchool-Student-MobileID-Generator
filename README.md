@@ -31,3 +31,9 @@ A mobile application for generating student IDs for AltSchool students.
 ## Contributing
 
 Contributions are welcome! Please open issues or submit pull requests.
+
+##
+
+Personal Project and Tests.
+
+---
