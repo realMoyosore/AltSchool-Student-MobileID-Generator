@@ -1,5 +1,3 @@
-// import { jsPDF } from "jspdf";
-
 document.getElementById("mobileID-generator").addEventListener("submit", async function (e) {
   e.preventDefault();
 
@@ -62,7 +60,7 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   const studentId = document.getElementById("student-id").value;
   const track = document.getElementById("track").value;
 
-  // Update main-content with user input
+  // Update main-content with the user input
   const textSpans = document.querySelectorAll('.text-content span');
   if (textSpans.length >= 6) {
     textSpans[0].textContent = surname;
@@ -75,7 +73,7 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     textSpans[5].textContent = expiryDate.toLocaleDateString();
   }
 
-  // Update student image
+  // Update student photo section
   const photoInput = document.getElementById("idPhoto");
   const studentImageDiv = document.querySelector(".student-image");
   studentImageDiv.innerHTML = ""; // Clear previous image
