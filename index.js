@@ -107,4 +107,7 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   if (idNumberSpan) {
     idNumberSpan.textContent = studentId;
   }
+
+  document.getElementById("mobileID-generator").reset();
+
 });
