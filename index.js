@@ -108,6 +108,4 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     idNumberSpan.textContent = studentId;
   }
 
-  document.getElementById("mobileID-generator").reset();
-
 });
