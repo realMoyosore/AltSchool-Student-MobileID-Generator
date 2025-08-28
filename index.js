@@ -102,10 +102,4 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     height: 80
   });
 
-  // Update student ID in id-number section
-  const idNumberSpan = document.querySelector('.id-number span');
-  if (idNumberSpan) {
-    idNumberSpan.textContent = studentId;
-  }
-
 });
