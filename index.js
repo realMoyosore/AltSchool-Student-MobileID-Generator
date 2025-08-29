@@ -102,4 +102,7 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
     height: 80
   });
 
+  qrCode.makeCode(studentId);
+  
+
 });
