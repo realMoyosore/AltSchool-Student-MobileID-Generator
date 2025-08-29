@@ -103,6 +103,6 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   });
 
   qrCode.makeCode(studentId);
-  
-
+  document.getElementById("mobileID-generator").reset();
+  alert("Mobile ID preview updated!");
 });
