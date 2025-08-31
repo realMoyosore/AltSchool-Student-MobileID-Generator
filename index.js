@@ -1,3 +1,4 @@
+// Main function
 document.getElementById("mobileID-generator").addEventListener("submit", async function (e) {
   e.preventDefault();
 
