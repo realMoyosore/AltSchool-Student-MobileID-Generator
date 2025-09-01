@@ -5,7 +5,8 @@ A mobile application for generating student IDs for AltSchool students.
 ## Features
 
 - Registered student authentication
-- Mobile ID generation with QR code
+- Mobile ID generation
+- QR code for verification
 
 ## Getting Started
 
