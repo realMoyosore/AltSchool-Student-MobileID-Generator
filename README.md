@@ -12,7 +12,7 @@ A mobile application for generating student IDs for AltSchool students.
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/yourusername/AltSchool-Student-MobileID-Generator.git
+    git clone https://github.com/realmoyosore/AltSchool-Student-MobileID-Generatorgit .git
     ```
 
 2. Install dependencies:
