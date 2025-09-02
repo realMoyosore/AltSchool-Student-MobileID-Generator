@@ -13,20 +13,26 @@ A mobile application for generating student IDs for AltSchool students.
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/realmoyosore/AltSchool-Student-MobileID-Generatorgit .git
+
+    git clone https://github.com/realMoyosore/AltSchool-Student-MobileID-Generator.git
+
     ```
 
 2. Install dependencies:
 
     ```bash
+
     cd AltSchool-Student-MobileID-Generator
     npm install
+
     ```
 
 3. Start the development server:
 
     ```bash
+    
     npm start
+
     ```
 
 ##
