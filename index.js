@@ -107,3 +107,8 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
   document.getElementById("mobileID-generator").reset();
   alert("Mobile ID preview updated!");
 });
+
+// Dark mode toggle
+document.getElementById("darkModeToggle").addEventListener("click", function () {
+  document.body.classList.toggle("dark-mode");
+});
