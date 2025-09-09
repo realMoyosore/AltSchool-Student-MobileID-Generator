@@ -127,11 +127,3 @@ document.getElementById("resetForm").addEventListener("click", function () {
   document.querySelector('.qrcode-section').innerHTML = '';
 });
 
-// Service Worker registration for PWA
-if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function () {
-    navigator.serviceWorker.register('/service-worker.js').then(function (registration) {
-      console.log('Service Worker registered with scope:', registration.scope);
-    })
-  });
-}
