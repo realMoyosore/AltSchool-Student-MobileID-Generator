@@ -118,13 +118,3 @@ document.getElementById("printID").addEventListener("click", function () {
   window.print();
 });
 
-// Reset functionality
-document.getElementById("resetForm").addEventListener("click", function () {
-  document.getElementById("mobileID-generator").reset();
-  const textSpans = document.querySelectorAll('.text-content span');
-  textSpans.forEach(span => span.textContent = '');
-  document.querySelector(".student-image").innerHTML = 'No photo uploaded';
-  document.querySelector('.qrcode-section').innerHTML = '';
-});
-
-git 
