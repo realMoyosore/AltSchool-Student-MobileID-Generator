@@ -123,3 +123,14 @@ document.getElementById("printID").
   addEventListener("click", function () {
     window.print();
   });
+
+  // Reset form and preview
+document.getElementById("resetForm").addEventListener("click", function () {
+  document.getElementById("mobileID-generator").reset();
+  const textSpans = document.querySelectorAll('.text-content span');
+  textSpans.forEach(span => span.textContent = "");
+  const studentImageDiv = document.querySelector(".student-image");
+  studentImageDiv.innerHTML = "No photo uploaded";
+  const qrSection = document.querySelector('.qrcode-section');
+  qrSection.innerHTML = "";
+});
