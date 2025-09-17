@@ -112,4 +112,7 @@ document.getElementById("mobileID-generator").addEventListener("submit", async f
 document.getElementById("darkModeToggle").addEventListener("click", function () {
   document.body.classList.toggle("dark-mode");
 });
-
+// Light mode toggle
+document.getElementById("lightModeToggle").addEventListener("click", function () {
+  document.body.classList.remove("dark-mode");
+});
