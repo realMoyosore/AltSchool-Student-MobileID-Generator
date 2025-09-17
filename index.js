@@ -134,15 +134,3 @@ document.getElementById("resetForm").addEventListener("click", function () {
   const qrSection = document.querySelector('.qrcode-section');
   qrSection.innerHTML = "";
 });
-
-// Initialize QR code on page load
-window.addEventListener("load", function () {
-  const qrSection = document.querySelector('.qrcode-section');
-  const qrCode = new QRCode(qrSection, {
-    text: "SampleID",
-    width: 80,
-    height: 80
-  });
-
-  qrCode.makeCode("SampleID");
-});
